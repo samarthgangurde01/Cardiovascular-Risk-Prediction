@@ -37,16 +37,21 @@ requirements.txt:contains required libraries
 
 
 ## Results
+
         Model	             Accuracy
-0 KNeighbors classifier     0.873
-1 Random Forests            0.890
-2 Logistic Regression       0.700
+        
+0 KNeighbors classifier      0.873
+
+1 Random Forests             0.890
+
+2 Logistic Regression        0.700
 
 ## Screenshots
-image
-image
-image
-image
+![image](https://user-images.githubusercontent.com/93859458/152776902-3650f9bf-455b-454d-a8f0-4185b0159d91.png)
+![image](https://user-images.githubusercontent.com/93859458/152777045-bd5211c9-b7d3-4846-ab60-729bbef7d6c4.png)
+![image](https://user-images.githubusercontent.com/93859458/152777153-d7e4f1ed-db54-495f-a830-33f3ee6429cf.png)
+![image](https://user-images.githubusercontent.com/93859458/152777289-a605ac71-554a-4f8a-a9f1-60bc70a953b3.png)
+
 
 ## Run Locally
 Clone the project
