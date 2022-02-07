@@ -1,9 +1,10 @@
+# Project Title : Cardiovascular Risk Prediction
 
-# Description
+## Description
 
-## Project Title : Cardiovascular Risk Prediction
 we started our project by importing data and then we handeled missing values and duplicates.further we went to analysis During the time of our analysis, we initially did EDA on all the features of our datset.. We first analysed our dependent variable, 'TenYearCHD'. Next we analysed categorical variable and dropped the variable who were not co-related, we also analysed numerical variable, found out the correlation, distribution and their relationship with the dependent variable. We also removed some numerical features and hot encoded the categorical variables.
 Next we implemented 3 machine learning algorithms Kneighbour clasiifier, Random Forest and Logistic regression. We did hyperparameter tuning to improve our model performance
+we created our flask app and deployed it with on- Heroku 
 
 
 ## Table of Content
@@ -15,7 +16,7 @@ Next we implemented 3 machine learning algorithms Kneighbour clasiifier, Random 
 * Deployment
 * Business Summary
 * Acknowledgements
-
+* 
 
 ## Dataset Information
 The dataset is from an ongoing cardiovascular study on residents of the town of Framingham,Massachusetts. The classification goal is to predict whether the patient has a 10-year risk offuture coronary heart disease (CHD). The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes.
@@ -31,6 +32,7 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 * imblearn
 * pickle
 
+
 ## Files
 * This repository contains files as mentioned below
 * capston_cardiovascular_risk PREDICTION.ipynb: Google colab contains all the python code, documentation and visualization
@@ -42,6 +44,7 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 * info1641661138.jpeg:image
 * philly-bike-share.jpeg:image
 * requirements.txt:contains required libraries 
+
 
 ## Results
 
@@ -59,7 +62,6 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 
 
 
-
 ## Run Locally
 
 Clone the project
@@ -74,18 +76,22 @@ Go to the project directory
   cd my-project
 ```
 
-Install dependencies
+Install all the libraries mentioned in the requirements.txt file with the command pip install -r requirements.txt
 
 ```bash
-  npm install
+   pip install -r requirements.tx
 ```
 
-Start the server
+Open your terminal/command prompt from your project directory and run the file main.py by executing the command 
 
 ```bash
-  npm run start
+  python3 app.py
 ```
+Go to your browser and type in the address bar.
 
+```bash
+  http://127.0.0.1:5000/ 
+```
 
 ## Deployment
 
@@ -93,7 +99,8 @@ Start the server
 
 ## Business Goal:
 
+
 ## Feedback
 
-If you have any feedback, please reach out to us at samarthgangurde01.com
+If you have any feedback, please reach out to us at samarthgangurde01gmail.com
 
