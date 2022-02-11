@@ -48,10 +48,12 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 
 ## Results
 
-            Model	      Accuracy
-0	KNeighbors classifier	0.873
-1	Random Forests      	0.890
-2	Logistic Regression 	0.700
+Model	                       Accuracy
+KNeighbors classifier	            0.873
+
+Random Forests      	            0.890
+
+Logistic Regression 	            0.700
 
 
 ## Screenshots
