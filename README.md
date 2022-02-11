@@ -14,12 +14,12 @@ we created our flask app and deployed it with on- Heroku
 * Results
 * Screenshots
 * Deployment
-* Business Summary
-* Acknowledgements
-* 
+* Feedback
 
 ## Dataset Information
 The dataset is from an ongoing cardiovascular study on residents of the town of Framingham,Massachusetts. The classification goal is to predict whether the patient has a 10-year risk offuture coronary heart disease (CHD). The dataset provides the patients’ information. It includes over 4,000 records and 15 attributes.
+
+Dataset Link:-https://raw.githubusercontent.com/samarthgangurde01/Cardiovascular-Risk-Prediction/main/data_cardiovascular_risk.csv
 
 
 ## Tools and Libraries Used
@@ -35,16 +35,22 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 
 ## Files
 * This repository contain files as mentioned below
+
 * capston_cardiovascular_risk PREDICTION.ipynb: Google colab contains all the python code, documentation and visualization
+
 * data_cardiovascular_risk.csv: Our dataset 
+
 * Data.csv: Our processed dataset file
+
 * app.py:contains whole structure of app
+
 * requirements.txt:contains required libraries 
 
 
 ## Results
 
 Model	                       Accuracy
+
 KNeighbors classifier	            0.87
 
 Random Forests      	            0.89
@@ -110,6 +116,8 @@ screenshort of Heroku ploatform
 ![image](https://user-images.githubusercontent.com/93859458/153572083-e0818742-8166-4e35-91e2-e7b14bed6cf2.png)
 
 
+
+
 ## Deployed App
 ![image](https://user-images.githubusercontent.com/93859458/153576834-35da14bb-d700-48dc-b1f0-e35d993a7760.png)
 
@@ -117,5 +125,5 @@ App Link:-https://cardiovascular-risk-prediction.herokuapp.com
 
 ## Feedback
 
-If you have any feedback, please reach out to us at samarthgangurde01gmail.com
+If you have any feedback, please reach out to us at samarthgangurde01@gmail.com
 
