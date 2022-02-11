@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+</head>
+<body>
+    <div id="container-form">
+    <center>-
+    <div class="container">
+
+        <h1 style="margin-top: 0px;" class="header">Cardiovascular Risk Prediction</h1>
+    </div>
+    </center>
+
+
+    <center>
+        <h4>Hey, {{ n }} fill the form to check for Cardiovascular Risk.</h4>
+        <hr>
+        </center>
+        <center>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label for="Age" style="font-size: 20px;"><b>AGE</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Enter Your Age" name="age" id="age" required>
+                    </td>
+                </tr>
+
+                <tr>
+                  <td>
+                        <label for="sex" style="font-size: 20px;"><b>SEX</b></label>
+                    </td>
+                    <td>
+                        <select name="sex" id="sex">
+                            <option value="0">female</option>
+                            <option value="1">male</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="is_smoking"style="font-size: 20px;"><b>SMOKES</b></label>
+                    </td>
+                    <td>
+                        <select name="is_smoking" id="is_smoking">
+                            <option  value="0">NO</option>
+                            <option  value="1">YES</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="cigsPerDay" style="font-size: 20px;"><b>Cigs Per Day</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="cigsPerDay(0-50)" name="cigsPerDay" id="cigsPerDay" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="BPMeds" style="font-size: 20px;"><b>BP MEDS</b></label>
+                    </td>
+                    <td>
+                        <select name="BPMeds" id="BPMeds">
+                            <option  value="0">NO</option>
+                            <option  value="1">YES</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        <label for="prevalentHyp" style="font-size: 20px;"> <b>PREVALENTHYP</b> </label>
+                    </td>
+                    <td>
+                        <select name="prevalentHyp" id="prevalentHyp">
+                            <option  value="0">NO</option>
+                            <option  value="1">YES</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label  for="diabetes" style="font-size: 20px;"><b>DIABETIC</b></label>
+                    </td>
+                    <td>
+                        <select name="diabetes" id="diabetes">
+                            <option value="0">NO</option>
+                            <option value="1">YES</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="totChol" style="font-size: 20px;"><b>TOTCHOL</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="TotChol(110-340)" name="totChol" id="totChol" required>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        <label for="sysBP" style="font-size: 20px;"><b>SYSBP</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="SYSBP(80-180)" name="sysBP" id="sysBP" required>
+                    </td>
+                </tr>
+
+                <tr>
+                     <td>
+                        <label for="BMI" style="font-size: 20px;"><b>BMI</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="BMI(15-35)" name="BMI" id="BMI" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="heartRate" style="font-size: 20px;"><b>HEARTRATE</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="HeartRate(40-110)" name="heartRate" id="heartRate" required>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        <label for="glucose_median" style="font-size: 20px;"><b>GLOCOSE</b></label>
+                    </td>
+                    <td>
+                        <input type="number" placeholder="Glucose(60-220)" name="glucose_median" id="glucose_median" required>
+                    </td>
+                </tr>
+
+                </table>
+        <!-- Show button -->
+            <div>
+                 <input type="submit" name="" value="Predict"></input></a>
+            </div>
+
+                <!-- Show predicted output using ML model -->
+             <div>
+                 <center>
+                   <h1>{{ prediction_text }}</h1>
+                 </center>
+             </div>
+
+        </form>
+        </center>
+        </div>
+
+
+
+
+    <style>
+
+    #container-form{
+
+        background: white;
+        width: 500px;
+		padding: 80px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-family: verdana;
+		text-align: center;
+		margin-left: 300px;
+		height: 1000px;
+        }
+
+    header{
+        padding: 20px;
+        text-align: center;
+        margin-top: 0px;
+        font-size: 20px;
+        width: 100%;
+        }
+
+
+    body{
+        background-image: url('https://miro.medium.com/max/534/1*hj18nKHXLOD8H1jksQtN3A.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        overflow-x: hidden;
+        margin-top: 0px;
+
+       }
+
+    input[type=submit]{
+        background-color: #04AA6D;
+        color: white;
+        font-size: 15px;
+        width:180px;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        opacity: 0.9;
+       }
+    #age {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+    #sex {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+    #is_smoking {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+
+    #cigsPerDay {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+
+    #BPMeds {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+    #prevalentHyp{
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    #diabetes{
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    #totChol {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+
+    #sysBP {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+
+    #BMI {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+
+    #heartRate {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+    }
+
+    #glucose_median {
+        border-radius: 14px;
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        text-align: center;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+
+
+    }
+
+    </style>
+
+</body>
+</html>
