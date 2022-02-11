@@ -34,26 +34,22 @@ The dataset is from an ongoing cardiovascular study on residents of the town of 
 
 
 ## Files
-* This repository contains files as mentioned below
+* This repository contain files as mentioned below
 * capston_cardiovascular_risk PREDICTION.ipynb: Google colab contains all the python code, documentation and visualization
 * data_cardiovascular_risk.csv: Our dataset 
 * Data.csv: Our processed dataset file
 * app.py:contains whole structure of app
-* eda.py:contains EDA setup for app
-* main.py:contains best algorithm for app
-* info1641661138.jpeg:image
-* philly-bike-share.jpeg:image
 * requirements.txt:contains required libraries 
 
 
 ## Results
 
 Model	                       Accuracy
-KNeighbors classifier	            0.873
+KNeighbors classifier	            0.87
 
-Random Forests      	            0.890
+Random Forests      	            0.89
 
-Logistic Regression 	            0.700
+Logistic Regression 	            0.70
 
 
 ## Screenshots
@@ -97,10 +93,27 @@ Go to your browser and type in the address bar.
 
 ## Deployment
 
+we deployed our app on Heroku
+Heroku is a cloud platform as a service (PaaS) supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Scala, Python.
+
+1. Signing Up..First, visit Heroku.com and sign up for a new account.
+
+2. Creating Your App,Once you have your account, click the 'New' menu in the upper right corner and select 'Create New App'
+
+3. Now, simply name your new app
+
+4. Connect your github account to the Heroku 
+
+5. Select repository name ,choose branch as main and click on Deploy Branch..Here you gooo!
+
+screenshort of Heroku ploatform
+![image](https://user-images.githubusercontent.com/93859458/153572083-e0818742-8166-4e35-91e2-e7b14bed6cf2.png)
 
 
-## Business Goal:
+## Deployed App
+![image](https://user-images.githubusercontent.com/93859458/153576834-35da14bb-d700-48dc-b1f0-e35d993a7760.png)
 
+App Link:-https://cardiovascular-risk-prediction.herokuapp.com
 
 ## Feedback
 
