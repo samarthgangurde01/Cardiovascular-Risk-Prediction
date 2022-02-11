@@ -123,6 +123,20 @@ screenshort of Heroku ploatform
 
 App Link:-https://cardiovascular-risk-prediction.herokuapp.com
 
+## Trial Dataset
+age :- 36
+sex :- male
+is_smoking :- NO
+cigsPerDay :- 0.0
+BPMeds :- NO
+prevalentHyp:- YES
+diabetes :- YES
+totChol :- 212
+sysBP :-168
+BMI :-29.77
+heartRat :-72
+glucose :-75
+
 ## Feedback
 
 If you have any feedback, please reach out to us at samarthgangurde01@gmail.com
